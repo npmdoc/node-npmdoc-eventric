@@ -1,0 +1,485 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/efacilitation/eventric#readme">eventric (v0.26.0)</a>
+</h1>
+<h4>behavior-first application development</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eventric">module eventric</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._handleRemoteRPCRequest">
+            function <span class="apidocSignatureSpan">eventric.</span>_handleRemoteRPCRequest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class">
+            function <span class="apidocSignatureSpan">eventric.</span>_storeDefinition.Class
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_contexts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_domainEventHandlers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_domainEventHandlersAll</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_globalContext</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_globalProjections</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_params</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_remoteEndpoints</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_storeDefinition</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric.</span>_storeDefinition.Class.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eventric._storeDefinition">module eventric._storeDefinition</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.</span>Class
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric._storeDefinition.</span>options</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eventric._storeDefinition.Class">module eventric._storeDefinition.Class</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class.Class">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.</span>Class
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eventric._storeDefinition.Class.prototype">module eventric._storeDefinition.Class.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class.prototype.destroy">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByAggregateId">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>findDomainEventsByAggregateId
+            <span class="apidocSignatureSpan">(aggregateIds, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByName">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>findDomainEventsByName
+            <span class="apidocSignatureSpan">(domainEventNames, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByNameAndAggregateId">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>findDomainEventsByNameAndAggregateId
+            <span class="apidocSignatureSpan">(domainEventNames, aggregateIds, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class.prototype.initialize">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>initialize
+            <span class="apidocSignatureSpan">(_context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventric._storeDefinition.Class.prototype.saveDomainEvent">
+            function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>saveDomainEvent
+            <span class="apidocSignatureSpan">(domainEvent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>domainEventSequence</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eventric" id="apidoc.module.eventric">module eventric</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._handleRemoteRPCRequest" id="apidoc.element.eventric._handleRemoteRPCRequest">
+        function <span class="apidocSignatureSpan">eventric.</span>_handleRemoteRPCRequest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_handleRemoteRPCRequest = function (){ return fn.apply(me, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class" id="apidoc.element.eventric._storeDefinition.Class">
+        function <span class="apidocSignatureSpan">eventric.</span>_storeDefinition.Class
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InMemoryStore() {
+	    this._domainEvents = [];
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eventric._storeDefinition" id="apidoc.module.eventric._storeDefinition">module eventric._storeDefinition</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class" id="apidoc.element.eventric._storeDefinition.Class">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.</span>Class
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InMemoryStore() {
+	    this._domainEvents = [];
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eventric._storeDefinition.Class" id="apidoc.module.eventric._storeDefinition.Class">module eventric._storeDefinition.Class</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class.Class" id="apidoc.element.eventric._storeDefinition.Class.Class">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.</span>Class
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InMemoryStore() {
+	    this._domainEvents = [];
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eventric._storeDefinition.Class.prototype" id="apidoc.module.eventric._storeDefinition.Class.prototype">module eventric._storeDefinition.Class.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class.prototype.destroy" id="apidoc.element.eventric._storeDefinition.Class.prototype.destroy">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+	    return Promise.resolve();
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByAggregateId" id="apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByAggregateId">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>findDomainEventsByAggregateId
+        <span class="apidocSignatureSpan">(aggregateIds, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findDomainEventsByAggregateId = function (aggregateIds, callback) {
+	    var domainEvents;
+	    if (!(aggregateIds instanceof Array)) {
+	      aggregateIds = [aggregateIds];
+	    }
+	    domainEvents = this._domainEvents.filter(function(domainEvent) {
+	      return aggregateIds.indexOf(domainEvent.aggregate.id) &gt; -1;
+	    });
+	    return callback(null, domainEvents);
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByName" id="apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByName">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>findDomainEventsByName
+        <span class="apidocSignatureSpan">(domainEventNames, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findDomainEventsByName = function (domainEventNames, callback) {
+	    var events;
+	    if (!(domainEventNames instanceof Array)) {
+	      domainEventNames = [domainEventNames];
+	    }
+	    events = this._domainEvents.filter(function(domainEvent) {
+	      return domainEventNames.indexOf(domainEvent.name) &gt; -1;
+	    });
+	    return callback(null, events);
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByNameAndAggregateId" id="apidoc.element.eventric._storeDefinition.Class.prototype.findDomainEventsByNameAndAggregateId">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>findDomainEventsByNameAndAggregateId
+        <span class="apidocSignatureSpan">(domainEventNames, aggregateIds, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findDomainEventsByNameAndAggregateId = function (domainEventNames, aggregateIds, callback) {
+	    var domainEvents;
+	    if (!(domainEventNames instanceof Array)) {
+	      domainEventNames = [domainEventNames];
+	    }
+	    if (!(aggregateIds instanceof Array)) {
+	      aggregateIds = [aggregateIds];
+	    }
+	    domainEvents = this._domainEvents.filter(function(domainEvent) {
+	      return domainEventNames.indexOf(domainEvent.name) &gt; -1 &amp;&amp; aggregateIds.indexOf(domainEvent.aggregate.id) &gt; -1;
+	    });
+	    return callback(null, domainEvents);
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class.prototype.initialize" id="apidoc.element.eventric._storeDefinition.Class.prototype.initialize">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>initialize
+        <span class="apidocSignatureSpan">(_context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function (_context) {
+	    this._context = _context;
+	    return new Promise((function(_this) {
+	      return function(resolve) {
+	        _this._domainEventsCollectionName = _this._context.name + ".DomainEvents";
+	        return resolve();
+	      };
+	    })(this));
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Execution
+
+After defining the command handlers they can be executed from outside the context.
+In order to work with a context it needs to be initialized.
+The initialization is mainly required for projections.
+
+```coffeescript
+todoContext.<span class="apidocCodeKeywordSpan">initialize</span>()
+.then -&gt;
+todoContext.command 'CreateTodo', title: 'My first todo'
+.then (todoId) -&gt;
+todoContext.command 'ChangeTodoTitle',
+  todoId: todoId
+  title: 'My first changed todo'
+.then -&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eventric._storeDefinition.Class.prototype.saveDomainEvent" id="apidoc.element.eventric._storeDefinition.Class.prototype.saveDomainEvent">
+        function <span class="apidocSignatureSpan">eventric._storeDefinition.Class.prototype.</span>saveDomainEvent
+        <span class="apidocSignatureSpan">(domainEvent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveDomainEvent = function (domainEvent) {
+	    return new Promise((function(_this) {
+	      return function(resolve) {
+	        domainEvent.id = _this.domainEventSequence.currentDomainEventId++;
+	        _this._domainEvents.push(domainEvent);
+	        return resolve(domainEvent);
+	      };
+	    })(this));
+	  }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
